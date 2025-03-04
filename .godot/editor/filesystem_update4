@@ -1,7 +1,4 @@
-res://player_2.tscn
-res://player_2.gd
 res://Scenes/main.tscn
 res://Scenes/player.tscn
-res://enemy.tscn
 res://player2.tscn
-res://player2.gd
+res://enemy.tscn

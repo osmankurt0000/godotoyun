@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1741035347
+::res://::1741093516
 DarkSamurai (64x64).png::CompressedTexture2D::4424685883963069278::1741033656::1741033658::1::::<><>::
 enemy.gd::GDScript::-1::1741020809::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::174655436766856342::1741035255::0::1::::<><>::uid://cg3er051hhi41::::res://Asset/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png<>res://enemy.gd
+enemy.tscn::PackedScene::174655436766856342::1741038077::0::1::::<><>::uid://cg3er051hhi41::::res://Asset/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png<>res://enemy.gd
 icon.svg::CompressedTexture2D::5004740043098673237::1740505352::1740505358::1::::<><>::
-player2.gd::GDScript::-1::1741035254::0::1::::<>CharacterBody2D<>::
-player2.tscn::PackedScene::4935551147183033972::1741035255::0::1::::<><>::res://player2.gd<>uid://b4bl6ve34yxhe::::res://DarkSamurai (64x64).png
+player2.gd::GDScript::-1::1741036530::0::1::::<>CharacterBody2D<>::
+player2.tscn::PackedScene::4935551147183033972::1741038073::0::1::::<><>::res://player2.gd<>uid://dw4qp0ftbh1d3::::res://Knight/DarkSamurai (64x64).png
+player.tscn::PackedScene::7957273168869402175::1741037120::0::1::::<><>::uid://mgqwf8rkd2ew::::res://Asset/Hero Knight/Sprites/HeroKnight/HeroKnight.png
 ::res://Asset/::1740725694
 ::res://Asset/Hero Knight/::1740725694
 EULA.txt::TextFile::-1::1740725694::0::1::::<><>::
@@ -445,7 +446,7 @@ Autor_note.txt::TextFile::-1::1740928957::0::1::::<><>::
 moon.png::CompressedTexture2D::4251150704882990414::1740928957::1740928958::1::::<><>::
 test_1.png::CompressedTexture2D::1870450484067617478::1740928957::1740928958::1::::<><>::
 test_2.png::CompressedTexture2D::3558354054671914631::1740928957::1740928958::1::::<><>::
-::res://Knight/::1741035347
+::res://Knight/::1741035348
 DarkSamurai (64x64).png::CompressedTexture2D::8764283146449276370::1741035347::1741035348::1::::<><>::
 KnightAttack_strip.png::CompressedTexture2D::7550370491684634882::1741035347::1741035348::1::::<><>::
 KnightDeath_strip.png::CompressedTexture2D::2033942182527084552::1741035347::1741035348::1::::<><>::
@@ -461,9 +462,9 @@ noBKG_KnightJumpAndFall_strip.png::CompressedTexture2D::5394902901483251793::174
 noBKG_KnightRoll_strip.png::CompressedTexture2D::6963208654211268060::1741035347::1741035348::1::::<><>::
 noBKG_KnightRun_strip.png::CompressedTexture2D::9191343978840277625::1741035347::1741035348::1::::<><>::
 noBKG_KnightShield_strip.png::CompressedTexture2D::3707580903763887276::1741035347::1741035348::1::::<><>::
-::res://Scenes/::1741035255
+::res://Scenes/::1741038076
 main.gd::GDScript::-1::1740736847::0::1::::<>Node2D<>::
-main.tscn::PackedScene::3225573149701255928::1741035255::0::1::::<><>::res://Scenes/main.gd<>uid://dakb0f7l1m2ug::::res://EnvironmentTiles/Final/Background_0.png<>uid://blwsikdl3dhtb::::res://EnvironmentTiles/Final/Background_1.png<>uid://k2mli06hean4::::res://Scenes/player.tscn<>uid://cqusxitqb5uo::::res://enemy.tscn<>uid://b46xf62o3m1bl::::res://EnvironmentTiles/Final/brush.png<>uid://1gpxs6154guq::::res://EnvironmentTiles/Final/Grass_background_1.png<>uid://dv2j21eqjkbvm::::res://EnvironmentTiles/Final/Salt.png<>uid://bu7q27qwi2vc0::::res://EnvironmentTiles/Final/Tiles.png<>uid://cck22oc4eohw3::::res://player2.tscn
+main.tscn::PackedScene::3225573149701255928::1741038076::0::1::::<><>::res://Scenes/main.gd<>uid://dakb0f7l1m2ug::::res://EnvironmentTiles/Final/Background_0.png<>uid://blwsikdl3dhtb::::res://EnvironmentTiles/Final/Background_1.png<>uid://k2mli06hean4::::res://Scenes/player.tscn<>uid://cqusxitqb5uo::::res://enemy.tscn<>uid://b46xf62o3m1bl::::res://EnvironmentTiles/Final/brush.png<>uid://1gpxs6154guq::::res://EnvironmentTiles/Final/Grass_background_1.png<>uid://dv2j21eqjkbvm::::res://EnvironmentTiles/Final/Salt.png<>uid://bu7q27qwi2vc0::::res://EnvironmentTiles/Final/Tiles.png<>uid://cck22oc4eohw3::::res://player2.tscn
 player.gd::GDScript::-1::1741033499::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::758375343611010951::1741035255::0::1::::<><>::res://Scenes/player.gd<>uid://mgqwf8rkd2ew::::res://Asset/Hero Knight/Sprites/HeroKnight/HeroKnight.png
+player.tscn::PackedScene::758375343611010951::1741038074::0::1::::<><>::res://Scenes/player.gd<>uid://mgqwf8rkd2ew::::res://Asset/Hero Knight/Sprites/HeroKnight/HeroKnight.png
 ::res://Script/::1740505471

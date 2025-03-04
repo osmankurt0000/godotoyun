@@ -428,27 +428,24 @@ script = ExtResource("1_3sfrd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 5
-position = Vector2(-283, 286)
-scale = Vector2(3.78, 4.32787)
+position = Vector2(-279.25, 264)
+scale = Vector2(1.905, 2.68853)
 sprite_frames = SubResource("SpriteFrames_to65q")
 animation = &"osman"
 
 [node name="hitbox" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(635, 293)
 shape = SubResource("CircleShape2D_bkj1s")
 
 [node name="hurtbox" type="Area2D" parent="."]
-visible = false
 position = Vector2(36, 28)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(599, 265)
+position = Vector2(-318, 264)
 shape = SubResource("CircleShape2D_t2xld")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(634, 292)
+position = Vector2(-287, 290)
 shape = SubResource("CircleShape2D_otyix")
