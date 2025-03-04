@@ -1,0 +1,12 @@
+CollisionShape2D
+Area2D
+Camera2D
+AnimatedSprite2D
+CharacterBody2D
+Node
+TileMapLayer
+Sprite2D
+Skeleton2D
+Node2D
+NavigationLink2D
+NavigationAgent2D
