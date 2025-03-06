@@ -1,0 +1,138 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Scenes/PlayableCharacters/CharacterBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Enemies/ChurchStage/Wizard/wizard.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Enemies/ChurchStage/Wizard/wizard-emission-mask.png" type="Texture" id=3]
+[ext_resource path="res://Shaders/GlowShader.shader" type="Shader" id=4]
+[ext_resource path="res://Scenes/Enemies/ChurchStage/Fireball.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Enemies/DeathAnimation.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Script/Enemies/Wizard.gd" type="Script" id=7]
+
+
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 4 )
+shader_param/glow_color = Color( 1, 0.494118, 0, 1 )
+shader_param/emission_texture = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 81, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 162, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 243, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 324, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 405, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 486, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 567, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 648, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 729, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 810, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 891, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 972, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 1053, 0, 81, 66 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 1134, 0, 81, 66 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": false,
+"name": "attack",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=18]
+radius = 9.35654
+height = 13.6126
+
+[sub_resource type="CapsuleShape2D" id=19]
+radius = 12.9282
+
+[node name="Wizard" instance=ExtResource( 1 )]
+collision_layer = 4
+collision_mask = 10
+script = ExtResource( 7 )
+fireball_scene = ExtResource( 5 )
+
+[node name="Body" parent="." index="0"]
+position = Vector2( 0, -32.8704 )
+
+[node name="Sprite" parent="Body" index="0"]
+material = SubResource( 1 )
+frames = SubResource( 17 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="DeathAnimation" parent="Body" index="1" instance=ExtResource( 6 )]
+visible = false
+
+[node name="HandFireballPos" type="Position2D" parent="Body" index="2"]
+position = Vector2( -32.832, 1.54339 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0, -16.0181 )
+shape = SubResource( 18 )
+
+[node name="CollideWithPlayer" type="Area2D" parent="." index="4"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollideWithPlayer" index="0"]
+position = Vector2( 0, -20.064 )
+shape = SubResource( 19 )
+
+[node name="AttackTimer" type="Timer" parent="." index="5"]
+wait_time = 2.5
+autostart = true
+[connection signal="animation_finished" from="Body/Sprite" to="." method="_on_Sprite_animation_finished"]
+[connection signal="frame_changed" from="Body/Sprite" to="." method="_on_Sprite_frame_changed"]
+[connection signal="body_entered" from="CollideWithPlayer" to="." method="_on_CollideWithPlayer_body_entered"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]

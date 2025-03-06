@@ -421,22 +421,24 @@ radius = 10.0499
 radius = 11.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_otyix"]
-radius = 19.0263
+radius = 39.3192
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_3sfrd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 5
-position = Vector2(-279.25, 264)
-scale = Vector2(1.905, 2.68853)
+position = Vector2(-282, 291)
+scale = Vector2(1.905, 2.31148)
 sprite_frames = SubResource("SpriteFrames_to65q")
 animation = &"osman"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(635, 293)
+position = Vector2(-285, 301)
 shape = SubResource("CircleShape2D_bkj1s")
 
 [node name="hurtbox" type="Area2D" parent="."]
@@ -447,5 +449,5 @@ position = Vector2(-318, 264)
 shape = SubResource("CircleShape2D_t2xld")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-287, 290)
+position = Vector2(-285, 301)
 shape = SubResource("CircleShape2D_otyix")

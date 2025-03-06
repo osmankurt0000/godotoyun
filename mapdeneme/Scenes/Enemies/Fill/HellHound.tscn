@@ -1,0 +1,159 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Scenes/PlayableCharacters/CharacterBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Enemies/Fill/HellHound/hell-hound-run.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Enemies/Fill/HellHound/hell-hound-idle.png" type="Texture" id=3]
+[ext_resource path="res://Script/Enemies/HellHound.gd" type="Script" id=4]
+[ext_resource path="res://Script/Enemies/HellHoundStateMachine.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Enemies/DeathAnimation.tscn" type="PackedScene" id=8]
+
+
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 67, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 67, 0, 67, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 134, 0, 67, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 201, 0, 67, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 268, 0, 67, 32 )
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": false,
+"name": "idle",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "run",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 12, 8 )
+
+[sub_resource type="Animation" id=20]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 2.5, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 23, 13 )
+
+[node name="HellHound" instance=ExtResource( 1 )]
+collision_layer = 4
+collision_mask = 10
+script = ExtResource( 4 )
+
+[node name="Body" parent="." index="0"]
+position = Vector2( 0, 2 )
+
+[node name="Sprite" parent="Body" index="0"]
+position = Vector2( 0, -18 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 18 )
+animation = "idle"
+frame = 11
+playing = true
+flip_h = true
+
+[node name="DeathAnimation" parent="Body" index="1" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 0, -34 )
+
+[node name="FloorRaycast" type="RayCast2D" parent="Body" index="2"]
+position = Vector2( -11, -2 )
+enabled = true
+cast_to = Vector2( 0, 30 )
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0, -8 )
+shape = SubResource( 19 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+anims/hurt = SubResource( 20 )
+
+[node name="StateMachine" parent="." index="3"]
+script = ExtResource( 5 )
+
+[node name="CollideWithPlayer" type="Area2D" parent="." index="4"]
+collision_layer = 4
+collision_mask = 2147483648
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollideWithPlayer" index="0"]
+position = Vector2( 0, -13 )
+shape = SubResource( 21 )
+[connection signal="animation_finished" from="Body/Sprite" to="." method="_on_Sprite_animation_finished"]
+[connection signal="body_entered" from="CollideWithPlayer" to="." method="_on_CollideWithPlayer_body_entered"]

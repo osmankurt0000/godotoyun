@@ -1,0 +1,177 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://Scenes/PlayableCharacters/CharacterBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Enemies/Fill/Ghost/ghost-idle.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Enemies/Fill/Ghost/ghost-shriek.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Enemies/Fill/Ghost/ghost-appears.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Enemies/Fill/Ghost/ghost-vanish.png" type="Texture" id=5]
+[ext_resource path="res://Script/Enemies/Ghost.gd" type="Script" id=6]
+[ext_resource path="res://Script/Enemies/GhostStateMachine.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Enemies/DeathAnimation.tscn" type="PackedScene" id=14]
+
+
+
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 10.7329
+height = 24.9506
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 256, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 384, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 5 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 5 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 5 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 5 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 5 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 5 )
+region = Rect2( 384, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 4 )
+region = Rect2( 192, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 4 )
+region = Rect2( 256, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 4 )
+region = Rect2( 320, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 64, 80 )
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "idle",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), null ],
+"loop": false,
+"name": "disappear",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": false,
+"name": "appear",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": false,
+"name": "spook",
+"speed": 7.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=27]
+radius = 8.0
+
+[node name="Ghost" instance=ExtResource( 1 )]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource( 6 )
+
+[node name="CollideWithPlayer" type="Area2D" parent="." index="0"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollideWithPlayer" index="0"]
+position = Vector2( 0, 1.92451 )
+shape = SubResource( 1 )
+
+[node name="Sprite" parent="Body" index="0"]
+frames = SubResource( 26 )
+animation = "idle"
+frame = 4
+playing = true
+
+[node name="DeathAnimation" parent="Body" index="1" instance=ExtResource( 14 )]
+visible = false
+position = Vector2( 0, 1.27283 )
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2( 0, 3.80126 )
+shape = SubResource( 27 )
+
+[node name="StateMachine" parent="." index="4"]
+script = ExtResource( 7 )
+
+[node name="Tween" type="Tween" parent="." index="5"]
+
+[node name="DisappearenceTimer" type="Timer" parent="." index="6"]
+one_shot = true
+[connection signal="body_entered" from="CollideWithPlayer" to="." method="_on_CollideWithPlayer_body_entered"]
+[connection signal="animation_finished" from="Body/Sprite" to="." method="_on_Sprite_animation_finished"]
+[connection signal="timeout" from="DisappearenceTimer" to="StateMachine" method="_on_DisappearenceTimer_timeout"]

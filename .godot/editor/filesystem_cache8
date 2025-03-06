@@ -1,13 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1741093516
+::res://::1741250511
 DarkSamurai (64x64).png::CompressedTexture2D::4424685883963069278::1741033656::1741033658::1::::<><>::
 enemy.gd::GDScript::-1::1741020809::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::174655436766856342::1741038077::0::1::::<><>::uid://cg3er051hhi41::::res://Asset/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png<>res://enemy.gd
+enemy.tscn::PackedScene::174655436766856342::1741215482::0::1::::<><>::uid://cg3er051hhi41::::res://Asset/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png<>res://enemy.gd
 icon.svg::CompressedTexture2D::5004740043098673237::1740505352::1740505358::1::::<><>::
-player2.gd::GDScript::-1::1741036530::0::1::::<>CharacterBody2D<>::
-player2.tscn::PackedScene::4935551147183033972::1741038073::0::1::::<><>::res://player2.gd<>uid://dw4qp0ftbh1d3::::res://Knight/DarkSamurai (64x64).png
+player2.gd::GDScript::-1::1741190511::0::1::::<>CharacterBody2D<>::
+player2.tscn::PackedScene::4935551147183033972::1741215483::0::1::::<><>::res://player2.gd<>uid://dw4qp0ftbh1d3::::res://Knight/DarkSamurai (64x64).png
 player.tscn::PackedScene::7957273168869402175::1741037120::0::1::::<><>::uid://mgqwf8rkd2ew::::res://Asset/Hero Knight/Sprites/HeroKnight/HeroKnight.png
-::res://Asset/::1740725694
+::res://Asset/::1741210824
+::res://Asset/FreeCatCharacterAnimations/::1741190494
+1_Cat_Idle-Sheet.png::CompressedTexture2D::6130279425756989793::1741190493::1741190494::1::::<><>::
+2_Cat_Run-Sheet.png::CompressedTexture2D::1648102849808211333::1741190493::1741190494::1::::<><>::
+3_Cat_Jump-Sheet.png::CompressedTexture2D::5222048353127607612::1741190493::1741190494::1::::<><>::
+4_Cat_Fall-Sheet.png::CompressedTexture2D::3052477930576179444::1741190493::1741190494::1::::<><>::
+Contact.txt::TextFile::-1::1741190493::0::1::::<><>::
+License.txt::TextFile::-1::1741190493::0::1::::<><>::
 ::res://Asset/Hero Knight/::1740725694
 EULA.txt::TextFile::-1::1740725694::0::1::::<><>::
 Instructions.txt::TextFile::-1::1740725694::0::1::::<><>::
@@ -427,6 +434,107 @@ Ribbon_Yellow_Connection_Right.png::CompressedTexture2D::5490555460353759982::17
 Ribbon_Yellow_Connection_Right_Pressed.png::CompressedTexture2D::8719244087486265680::1740505785::1740505820::1::::<><>::
 Ribbon_Yellow_Connection_Up.png::CompressedTexture2D::1553847655894303547::1740505785::1740505820::1::::<><>::
 Ribbon_Yellow_Connection_Up_Pressed.png::CompressedTexture2D::4194582699548383091::1740505785::1740505820::1::::<><>::
+::res://Asset/yenimapasset/::1741248550
+TX Plant.png::CompressedTexture2D::7462560653446929352::1741210818::1741210819::1::::<><>::
+TX Player.png::CompressedTexture2D::1208564057917901618::1741210818::1741210819::1::::<><>::
+TX Props.png::CompressedTexture2D::5033956548666938383::1741210818::1741210819::1::::<><>::
+TX Shadow Plant.png::CompressedTexture2D::8628715063695523608::1741210818::1741210819::1::::<><>::
+TX Shadow.png::CompressedTexture2D::2937337233671990382::1741210818::1741210819::1::::<><>::
+TX Struct.png::CompressedTexture2D::6528984439213828525::1741210818::1741210819::1::::<><>::
+TX Tileset Grass.png::CompressedTexture2D::7170395648911163808::1741210818::1741210819::1::::<><>::
+TX Tileset Stone Ground.png::CompressedTexture2D::2814772722283253893::1741210818::1741210819::1::::<><>::
+TX Tileset Wall.png::CompressedTexture2D::5045353255723073887::1741210818::1741210819::1::::<><>::
+::res://Asset/yenimapasset/Peasant's_House/::1741248566
+README.txt::TextFile::-1::1741248566::0::1::::<><>::
+::res://Asset/yenimapasset/Peasant's_House/Door_Animation/::1741248580
+Door_Animation-InLine.png::CompressedTexture2D::4031195376118568599::1741248566::1741248580::1::::<><>::
+::res://Asset/yenimapasset/Peasant's_House/Door_Animation/Door_Animation-FrameByFrame/::1741248579
+Door_Animation1.png::CompressedTexture2D::7324429763015076054::1741248565::1741248579::1::::<><>::
+Door_Animation2.png::CompressedTexture2D::8439708587697021147::1741248565::1741248579::1::::<><>::
+Door_Animation3.png::CompressedTexture2D::7921086599385815268::1741248565::1741248579::1::::<><>::
+Door_Animation4.png::CompressedTexture2D::7380464661095616::1741248565::1741248579::1::::<><>::
+Door_Animation5.png::CompressedTexture2D::2615243398765525379::1741248565::1741248579::1::::<><>::
+Door_Animation6.png::CompressedTexture2D::430271707452737960::1741248565::1741248579::1::::<><>::
+Door_Animation7.png::CompressedTexture2D::5743759546143657008::1741248565::1741248579::1::::<><>::
+Door_Animation8.png::CompressedTexture2D::6804122103168402928::1741248566::1741248579::1::::<><>::
+Door_Animation9.png::CompressedTexture2D::4721606159376936822::1741248566::1741248579::1::::<><>::
+Door_Animation10.png::CompressedTexture2D::1684676423203217314::1741248565::1741248579::1::::<><>::
+::res://Asset/yenimapasset/Peasant's_House/House_in_the_middle/::1741248551
+::res://Asset/yenimapasset/Peasant's_House/House_in_the_middle/Door_Animation/::1741248580
+Door_Animation1.png::CompressedTexture2D::791278825868019776::1741248566::1741248579::1::::<><>::
+Door_Animation2.png::CompressedTexture2D::6504116799681974373::1741248566::1741248580::1::::<><>::
+Door_Animation3.png::CompressedTexture2D::6607868283389649449::1741248566::1741248580::1::::<><>::
+Door_Animation4.png::CompressedTexture2D::6292603274061700266::1741248566::1741248580::1::::<><>::
+Door_Animation5.png::CompressedTexture2D::6349173314845811037::1741248566::1741248580::1::::<><>::
+Door_Animation6.png::CompressedTexture2D::2653089357863051820::1741248566::1741248580::1::::<><>::
+Door_Animation7.png::CompressedTexture2D::5015425692265420490::1741248566::1741248580::1::::<><>::
+Door_Animation8.png::CompressedTexture2D::4376292895039405958::1741248566::1741248580::1::::<><>::
+Door_Animation9.png::CompressedTexture2D::2743314810476322801::1741248566::1741248580::1::::<><>::
+Door_Animation10.png::CompressedTexture2D::12265079417123849::1741248566::1741248580::1::::<><>::
+::res://Asset/yenimapasset/Peasant's_House/House_in_the_middle/Window_Animation/::1741248580
+Window_Animation1.png::CompressedTexture2D::2714439337906613187::1741248566::1741248580::1::::<><>::
+Window_Animation2.png::CompressedTexture2D::418214247042176919::1741248566::1741248580::1::::<><>::
+Window_Animation3.png::CompressedTexture2D::9006053972981198301::1741248566::1741248580::1::::<><>::
+Window_Animation4.png::CompressedTexture2D::431381862314248607::1741248566::1741248580::1::::<><>::
+Window_Animation5.png::CompressedTexture2D::2010998318223152700::1741248566::1741248580::1::::<><>::
+Window_Animation6.png::CompressedTexture2D::3896988398909603170::1741248566::1741248580::1::::<><>::
+Window_Animation7.png::CompressedTexture2D::3295089223624989304::1741248566::1741248580::1::::<><>::
+Window_Animation8.png::CompressedTexture2D::3479923174917564154::1741248566::1741248580::1::::<><>::
+Window_Animation9.png::CompressedTexture2D::1400753012480101810::1741248566::1741248579::1::::<><>::
+Window_Animation10.png::CompressedTexture2D::8973468763668260016::1741248566::1741248579::1::::<><>::
+Window_Animation11.png::CompressedTexture2D::4579570656411473424::1741248566::1741248579::1::::<><>::
+Window_Animation12.png::CompressedTexture2D::1247098049646011060::1741248566::1741248579::1::::<><>::
+Window_Animation13.png::CompressedTexture2D::6816112800940655648::1741248566::1741248579::1::::<><>::
+Window_Animation14.png::CompressedTexture2D::8808874300642931527::1741248566::1741248579::1::::<><>::
+Window_Animation15.png::CompressedTexture2D::3125732731513356138::1741248566::1741248579::1::::<><>::
+Window_Animation16.png::CompressedTexture2D::9148775846710055252::1741248566::1741248579::1::::<><>::
+Window_Animation17.png::CompressedTexture2D::3269855050720529568::1741248566::1741248579::1::::<><>::
+::res://Asset/yenimapasset/Peasant's_House/Peasant's_House-NoAnimation/::1741251397
+Peasant's_House-NoAnimation.png::CompressedTexture2D::4510509675473753838::1741248566::1741248579::1::::<><>::
+Peasant's_House_B&W-NoAnimation.png::CompressedTexture2D::8096471130937762946::1741248566::1741248579::1::::<><>::
+::res://Asset/yenimapasset/Peasant's_House/Peasant's_House-NoAnimation/Isometric_Realm_Medieval_SAMPLE/::1741251397
+barn_07b.png::CompressedTexture2D::3349882710045974924::1741251397::1741251398::1::::<><>::
+bucket01.png::CompressedTexture2D::2346877931163452040::1741251397::1741251398::1::::<><>::
+cairn_01b.png::CompressedTexture2D::400644152706021249::1741251397::1741251398::1::::<><>::
+castlekeep_05.png::CompressedTexture2D::2807552000622873458::1741251397::1741251399::1::::<><>::
+castlekeep_07.png::CompressedTexture2D::4652297758566822325::1741251397::1741251398::1::::<><>::
+castlekeep_14.png::CompressedTexture2D::3460453911121390766::1741251397::1741251399::1::::<><>::
+field_12a.png::CompressedTexture2D::1618832294469227008::1741251397::1741251398::1::::<><>::
+house_01a.png::CompressedTexture2D::2100601728050551947::1741251397::1741251398::1::::<><>::
+house_02d.png::CompressedTexture2D::5008991349662072032::1741251397::1741251398::1::::<><>::
+house_06a.png::CompressedTexture2D::2168006726071896521::1741251397::1741251398::1::::<><>::
+house_07a.png::CompressedTexture2D::6998835935191561472::1741251397::1741251398::1::::<><>::
+manor_01a.png::CompressedTexture2D::1125678255891913786::1741251397::1741251398::1::::<><>::
+market_04a.png::CompressedTexture2D::8222404431487164494::1741251397::1741251398::1::::<><>::
+market_11a.png::CompressedTexture2D::1000206243598032264::1741251397::1741251398::1::::<><>::
+orchard_02.png::CompressedTexture2D::6772583490192964900::1741251397::1741251398::1::::<><>::
+shop_5a.png::CompressedTexture2D::6703195916366559756::1741251397::1741251398::1::::<><>::
+statue_01b.png::CompressedTexture2D::2783411474494981120::1741251397::1741251398::1::::<><>::
+tower_01a.png::CompressedTexture2D::3790519740708162325::1741251397::1741251398::1::::<><>::
+tower_04a.png::CompressedTexture2D::1774529478717096216::1741251397::1741251398::1::::<><>::
+tower_14a.png::CompressedTexture2D::7613935999238706512::1741251397::1741251398::1::::<><>::
+well_02.png::CompressedTexture2D::8090970488319432072::1741251397::1741251398::1::::<><>::
+windmill_04a.png::CompressedTexture2D::8623007474711864462::1741251397::1741251398::1::::<><>::
+::res://Asset/yenimapasset/Peasant's_House/Window_Animation/::1741248579
+Window_Animation-InLine.png::CompressedTexture2D::5614062535025021255::1741248567::1741248579::1::::<><>::
+::res://Asset/yenimapasset/Peasant's_House/Window_Animation/Window_Animation-FrameByFrame/::1741248579
+Window_Animation (1).png::CompressedTexture2D::2103414890217640993::1741248566::1741248579::1::::<><>::
+Window_Animation (2).png::CompressedTexture2D::3390420935999910108::1741248566::1741248579::1::::<><>::
+Window_Animation (3).png::CompressedTexture2D::8973561318265965220::1741248566::1741248579::1::::<><>::
+Window_Animation (4).png::CompressedTexture2D::2946813941115677096::1741248566::1741248579::1::::<><>::
+Window_Animation (5).png::CompressedTexture2D::6755511820715424865::1741248566::1741248579::1::::<><>::
+Window_Animation (6).png::CompressedTexture2D::3363863540534148215::1741248566::1741248579::1::::<><>::
+Window_Animation (7).png::CompressedTexture2D::5766442135230495552::1741248566::1741248579::1::::<><>::
+Window_Animation (8).png::CompressedTexture2D::1078410780092539629::1741248566::1741248579::1::::<><>::
+Window_Animation (9).png::CompressedTexture2D::113717178983109803::1741248566::1741248579::1::::<><>::
+Window_Animation (10).png::CompressedTexture2D::8185576052250401105::1741248566::1741248579::1::::<><>::
+Window_Animation (11).png::CompressedTexture2D::8676453732612585840::1741248566::1741248579::1::::<><>::
+Window_Animation (12).png::CompressedTexture2D::2278871347579847293::1741248566::1741248579::1::::<><>::
+Window_Animation (13).png::CompressedTexture2D::6265676371045405483::1741248566::1741248579::1::::<><>::
+Window_Animation (14).png::CompressedTexture2D::9076091931547888987::1741248566::1741248579::1::::<><>::
+Window_Animation (15).png::CompressedTexture2D::883086414668041314::1741248566::1741248579::1::::<><>::
+Window_Animation (16).png::CompressedTexture2D::2871883557672570480::1741248566::1741248579::1::::<><>::
+Window_Animation (17).png::CompressedTexture2D::8278786760879087316::1741248566::1741248579::1::::<><>::
 ::res://EnvironmentTiles/::1740928957
 EnvironmentTiles.png::CompressedTexture2D::5281560047464385947::1740928659::1740928660::1::::<><>::
 Tile_0.png::CompressedTexture2D::6104472210364739855::1740928659::1740928660::1::::<><>::
@@ -462,9 +570,9 @@ noBKG_KnightJumpAndFall_strip.png::CompressedTexture2D::5394902901483251793::174
 noBKG_KnightRoll_strip.png::CompressedTexture2D::6963208654211268060::1741035347::1741035348::1::::<><>::
 noBKG_KnightRun_strip.png::CompressedTexture2D::9191343978840277625::1741035347::1741035348::1::::<><>::
 noBKG_KnightShield_strip.png::CompressedTexture2D::3707580903763887276::1741035347::1741035348::1::::<><>::
-::res://Scenes/::1741038076
+::res://Scenes/::1741249103
 main.gd::GDScript::-1::1740736847::0::1::::<>Node2D<>::
-main.tscn::PackedScene::3225573149701255928::1741038076::0::1::::<><>::res://Scenes/main.gd<>uid://dakb0f7l1m2ug::::res://EnvironmentTiles/Final/Background_0.png<>uid://blwsikdl3dhtb::::res://EnvironmentTiles/Final/Background_1.png<>uid://k2mli06hean4::::res://Scenes/player.tscn<>uid://cqusxitqb5uo::::res://enemy.tscn<>uid://b46xf62o3m1bl::::res://EnvironmentTiles/Final/brush.png<>uid://1gpxs6154guq::::res://EnvironmentTiles/Final/Grass_background_1.png<>uid://dv2j21eqjkbvm::::res://EnvironmentTiles/Final/Salt.png<>uid://bu7q27qwi2vc0::::res://EnvironmentTiles/Final/Tiles.png<>uid://cck22oc4eohw3::::res://player2.tscn
+main.tscn::PackedScene::3225573149701255928::1741249103::0::1::::<><>::res://Scenes/main.gd<>uid://dakb0f7l1m2ug::::res://EnvironmentTiles/Final/Background_0.png<>uid://blwsikdl3dhtb::::res://EnvironmentTiles/Final/Background_1.png<>uid://k2mli06hean4::::res://Scenes/player.tscn<>uid://cqusxitqb5uo::::res://enemy.tscn<>uid://b46xf62o3m1bl::::res://EnvironmentTiles/Final/brush.png<>uid://1gpxs6154guq::::res://EnvironmentTiles/Final/Grass_background_1.png<>uid://dv2j21eqjkbvm::::res://EnvironmentTiles/Final/Salt.png<>uid://dek6jv6kph1bw::::res://Asset/yenimapasset/TX Plant.png<>uid://bu7q27qwi2vc0::::res://EnvironmentTiles/Final/Tiles.png<>uid://rho4xyqxw4ew::::res://Asset/yenimapasset/TX Player.png<>uid://cck22oc4eohw3::::res://player2.tscn<>uid://cdyqr8nl10y2r::::res://Asset/yenimapasset/TX Props.png<>uid://du62w87ld1ayi::::res://Asset/yenimapasset/TX Shadow Plant.png<>uid://bh34rrpa7pgio::::res://Asset/yenimapasset/TX Shadow.png<>uid://c0axojkq7pemn::::res://Asset/yenimapasset/TX Struct.png<>uid://dafnmsisyclbc::::res://Asset/yenimapasset/TX Tileset Grass.png<>uid://bgdq5pgo7k8k4::::res://Asset/yenimapasset/TX Tileset Stone Ground.png<>uid://cd5ah4axqcpyd::::res://Asset/yenimapasset/TX Tileset Wall.png<>uid://b5i6o2jpbfoc1::::res://Asset/yenimapasset/Peasant's_House/Peasant's_House-NoAnimation/Peasant's_House-NoAnimation.png
 player.gd::GDScript::-1::1741033499::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::758375343611010951::1741038074::0::1::::<><>::res://Scenes/player.gd<>uid://mgqwf8rkd2ew::::res://Asset/Hero Knight/Sprites/HeroKnight/HeroKnight.png
+player.tscn::PackedScene::758375343611010951::1741215480::0::1::::<><>::res://Scenes/player.gd<>uid://mgqwf8rkd2ew::::res://Asset/Hero Knight/Sprites/HeroKnight/HeroKnight.png
 ::res://Script/::1740505471

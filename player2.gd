@@ -50,7 +50,7 @@ func _physics_process(delta: float) -> void:
 	is_crouching = Input.is_action_pressed("crouch")
 	
 	# Zıplama işlemi
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump2") and is_on_floor():
 		velocity.y = jump_force  # Zıplama kuvvetini uygula
 	
 	# Yer çekimi sadece yere basmıyorken eklenmeli
@@ -60,7 +60,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = 0  # Eğer zemin üzerindeyse, düşüşü durdur
 
 	# Hareket ve yön kontrolü
-	var direction := Input.get_vector("left", "right", "up", "down")
+	var direction := Input.get_vector("left2", "right2", "jump2", "down2")
 	
 	# Eğilirken yürüyebilme
 	if is_crouching:
@@ -84,7 +84,7 @@ func _physics_process(delta: float) -> void:
 
 			if not is_on_floor():
 				if velocity.y < 0:
-					animated_sprite_2d.play("jump_up")  # Yukarı zıplama animasyonu
+					animated_sprite_2d.play("jump2")  # Yukarı zıplama animasyonu
 				else:
 					animated_sprite_2d.play("jump_down")  # Aşağı zıplama animasyonu
 			else:

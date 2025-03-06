@@ -1,0 +1,438 @@
+[gd_scene load_steps=73 format=2]
+
+[ext_resource path="res://Scenes/PlayableCharacters/CharacterBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/idle-monk.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/punch-monk.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/idle-emission.png" type="Texture" id=4]
+[ext_resource path="res://Script/Players/Monk/Monk.gd" type="Script" id=5]
+[ext_resource path="res://Script/Players/Monk/MonkStateMachine.gd" type="Script" id=6]
+[ext_resource path="res://Shaders/GlowShader.shader" type="Shader" id=7]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/crouch-monk.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/crouch-kick-monk.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/fall-monk.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/flying-kick-monk.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/hurt-monk.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/jump-monk.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/kick-monk.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/walk-monk.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/punch-particle.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Gothicvania/Characters/Player/Monk/punch-particle-emission.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/PlayableCharacters/PlayerCamera.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Script/Players/LifeController.gd" type="Script" id=19]
+[ext_resource path="res://Sprites/HUD/Life.png" type="Texture" id=20]
+[ext_resource path="res://Script/Players/EnergyController.gd" type="Script" id=21]
+[ext_resource path="res://Sprites/HUD/energybar.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Menu/Pause.tscn" type="PackedScene" id=23]
+
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 7 )
+shader_param/glow_color = Color( 1, 0.74902, 0, 0.286275 )
+shader_param/emission_texture = ExtResource( 4 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 164, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 246, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 11 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 9 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 9 )
+region = Rect2( 164, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 9 )
+region = Rect2( 246, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 9 )
+region = Rect2( 328, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 12 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 13 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 10 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 8 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 15 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 15 )
+region = Rect2( 164, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 15 )
+region = Rect2( 246, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 15 )
+region = Rect2( 328, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 15 )
+region = Rect2( 410, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 3 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 3 )
+region = Rect2( 164, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 3 )
+region = Rect2( 246, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 3 )
+region = Rect2( 328, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 3 )
+region = Rect2( 410, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 14 )
+region = Rect2( 82, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 14 )
+region = Rect2( 164, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 14 )
+region = Rect2( 246, 0, 82, 60 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 14 )
+region = Rect2( 328, 0, 82, 60 )
+
+[sub_resource type="SpriteFrames" id=39]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "flying-kick",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": false,
+"name": "crouch-kick",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 13 ) ],
+"loop": true,
+"name": "pre-punch",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "hurt",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "jump",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "fall",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": true,
+"name": "walk",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"loop": false,
+"name": "punch",
+"speed": 14.0
+}, {
+"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
+"loop": false,
+"name": "kick",
+"speed": 10.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=40]
+shader = ExtResource( 7 )
+shader_param/glow_color = Color( 1, 1, 1, 1 )
+shader_param/emission_texture = ExtResource( 17 )
+
+[sub_resource type="ParticlesMaterial" id=41]
+emission_shape = 1
+emission_sphere_radius = 2.0
+flag_rotate_y = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+orbit_velocity = 1.0
+orbit_velocity_random = 0.34
+tangential_accel = 81.61
+tangential_accel_random = 0.42
+scale = 0.1
+
+[sub_resource type="ShaderMaterial" id=42]
+shader = ExtResource( 7 )
+shader_param/glow_color = Color( 1, 1, 1, 1 )
+shader_param/emission_texture = ExtResource( 17 )
+
+[sub_resource type="ParticlesMaterial" id=43]
+flag_disable_z = true
+gravity = Vector3( 30, 0, 0 )
+initial_velocity = 25.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 0.2
+radial_accel_random = 0.24
+scale = 0.1
+
+[sub_resource type="RectangleShape2D" id=44]
+extents = Vector2( 23, 24 )
+
+[sub_resource type="RectangleShape2D" id=45]
+extents = Vector2( 23, 14 )
+
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 21, 14 )
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 17, 14 )
+
+[sub_resource type="CapsuleShape2D" id=48]
+radius = 7.0
+height = 28.0
+
+[sub_resource type="Animation" id=49]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Monk" instance=ExtResource( 1 )]
+collision_layer = 1
+collision_mask = 22
+script = ExtResource( 5 )
+
+[node name="Body" parent="." index="0"]
+position = Vector2( 0, -30 )
+
+[node name="DetectFloorRaycast" type="Node2D" parent="Body" index="0"]
+
+[node name="RayCast2D" type="RayCast2D" parent="Body/DetectFloorRaycast" index="0"]
+position = Vector2( 0, 30 )
+enabled = true
+cast_to = Vector2( 0, 5 )
+collision_mask = 2
+
+[node name="Sprite" parent="Body" index="1"]
+material = SubResource( 1 )
+frames = SubResource( 39 )
+animation = "idle"
+frame = 2
+playing = true
+
+[node name="PrePunchParticle" type="Particles2D" parent="Body" index="2"]
+material = SubResource( 40 )
+position = Vector2( -23, 12 )
+emitting = false
+amount = 40
+lifetime = 0.1
+randomness = 0.3
+local_coords = false
+process_material = SubResource( 41 )
+texture = ExtResource( 16 )
+
+[node name="PunchParticle" type="Particles2D" parent="Body" index="3"]
+material = SubResource( 42 )
+position = Vector2( 0, 3 )
+emitting = false
+amount = 15
+lifetime = 0.8
+one_shot = true
+speed_scale = 4.0
+local_coords = false
+process_material = SubResource( 43 )
+texture = ExtResource( 16 )
+
+[node name="KickAttackCollision" type="Area2D" parent="Body" index="4"]
+visible = false
+monitoring = false
+monitorable = false
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/KickAttackCollision" index="0"]
+position = Vector2( 23, 6 )
+shape = SubResource( 44 )
+
+[node name="CrouchKickAttackCollision" type="Area2D" parent="Body" index="5"]
+visible = false
+monitoring = false
+monitorable = false
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/CrouchKickAttackCollision" index="0"]
+position = Vector2( 23, 16 )
+shape = SubResource( 45 )
+
+[node name="PunchAttackCollision" type="Area2D" parent="Body" index="6"]
+visible = false
+monitoring = false
+monitorable = false
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/PunchAttackCollision" index="0"]
+position = Vector2( 20, 3 )
+shape = SubResource( 46 )
+
+[node name="FlyingKickAttackCollision" type="Area2D" parent="Body" index="7"]
+visible = false
+monitoring = false
+monitorable = false
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/FlyingKickAttackCollision" index="0"]
+position = Vector2( 17, 6 )
+shape = SubResource( 47 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( -1, -21 )
+shape = SubResource( 48 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+anims/Invincible = SubResource( 49 )
+
+[node name="StateMachine" parent="." index="3"]
+script = ExtResource( 6 )
+
+[node name="CoyoteTimer" type="Timer" parent="." index="4"]
+wait_time = 0.2
+one_shot = true
+
+[node name="Camera2D" parent="." index="5" instance=ExtResource( 18 )]
+
+[node name="HurtedTimerControl" type="Timer" parent="." index="6"]
+wait_time = 0.3
+one_shot = true
+
+[node name="InvincibleTimer" type="Timer" parent="." index="7"]
+wait_time = 0.5
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="8"]
+
+[node name="LifeController" type="Node2D" parent="CanvasLayer" index="0"]
+position = Vector2( 23, 19 )
+script = ExtResource( 19 )
+life_texture = ExtResource( 20 )
+
+[node name="EnergyController" type="Node2D" parent="CanvasLayer" index="1"]
+position = Vector2( 23, 29 )
+script = ExtResource( 21 )
+energy_texture = ExtResource( 22 )
+
+[node name="Timer" type="Timer" parent="CanvasLayer/EnergyController" index="0"]
+
+[node name="Pause" parent="CanvasLayer" index="2" instance=ExtResource( 23 )]
+visible = false
+[connection signal="animation_finished" from="Body/Sprite" to="StateMachine" method="_on_Sprite_animation_finished"]
+[connection signal="body_entered" from="Body/KickAttackCollision" to="." method="_on_KickAttackCollision_body_entered"]
+[connection signal="body_entered" from="Body/CrouchKickAttackCollision" to="." method="_on_CrouchKickAttackCollision2_body_entered"]
+[connection signal="body_entered" from="Body/PunchAttackCollision" to="." method="_on_PunchAttackCollision_body_entered"]
+[connection signal="body_entered" from="Body/FlyingKickAttackCollision" to="." method="_on_FlyingKickAttackCollision_body_entered"]
+[connection signal="timeout" from="InvincibleTimer" to="." method="_on_InvincibleTimer_timeout"]
+[connection signal="timeout" from="CanvasLayer/EnergyController/Timer" to="CanvasLayer/EnergyController" method="_on_Timer_timeout"]
